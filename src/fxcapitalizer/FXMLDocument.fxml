@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxcapitalizer.FXMLDocumentController">
+    <children>
+	<GridPane layoutX="35.0" layoutY="15.0" prefHeight="90.0" prefWidth="431.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+	    <columnConstraints>
+		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+	    </columnConstraints>
+	    <rowConstraints>
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+	    </rowConstraints>
+	    <children>     	
+		<Button fx:id="capitalizeButton" disable="true" onAction="#handleButtonAction" text="Capitalize" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+		<VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+		    <children>
+			<Label text="Input Text:" />
+			<TextField fx:id="inputTextField" prefHeight="25.0" />
+		    </children>
+		</VBox>
+		<VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+		    <children>
+			<Label text="Output Text:" />
+			<TextField fx:id="outputTextField" prefHeight="25.0" prefWidth="269.0" />
+		    </children>
+		</VBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="stylizeRadioButton" mnemonicParsing="false" selected="true" text="Stylize">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="firstLetterRadioButton" mnemonicParsing="false" text="First Letter">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="allLowerRadioButton" mnemonicParsing="false" text="All Lower">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="allUpperRadioButton" mnemonicParsing="false" text="All Upper" />
+               </children>
+            </HBox>
+	    </children>
+	</GridPane>
+    </children>
+</AnchorPane>
